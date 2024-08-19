@@ -5,6 +5,7 @@ import { dbConnection } from './database/dbConnection.js'
 dbConnection()
 const app = express()
 const port = 2000
+app.use(express.json())
 app.use('/user',userRouter)
 app.use('/product',productRouter)
 

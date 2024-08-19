@@ -14,6 +14,8 @@ const userModel= sequelizeConnection.define('user',{
     },
     age:DataTypes.INTEGER
     
+},{
+    timestamps:true
 })
-
+// sequelizeConnection.sync()
 export default userModel
