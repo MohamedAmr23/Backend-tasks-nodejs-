@@ -9,11 +9,14 @@ const productModel= sequelizeConnection.define('product',{
         autoIncrement:true
     },
     title:DataTypes.STRING(100),
-    description:DataTypes.STRING(400),      
+    description:DataTypes.STRING(400),
+    price:{
+        type:DataTypes.INTEGER(100)
+    }   
 },{
     timestamps:true
 })
-// sequelizeConnection.sync()
+sequelizeConnection.sync()
 // user contain many product
 userModel.hasMany(productModel,{
     onDelete:"CASCADE",
